@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026c3fa14e69b4bf38e1418f0ddede6b, type: 3}
+  m_Name: UIPrefabsSO
+  m_EditorClassIdentifier: com.actionfit.ui.prefabs.Editor::UIPrefabsSO
+  Image: {fileID: 8800998499500118053, guid: d135d1c89e9334b2da234fd7e2f55812, type: 3}
+  Text: {fileID: 7936948496014304967, guid: 04a568c76bb3e40e292c97317f737c91, type: 3}
+  Button: {fileID: 8320554812325287350, guid: b6c557e72198649edacc3b0f9bd64048, type: 3}
+  Input: {fileID: 1773723598333438607, guid: 465ec59568949475a915d0e2a229f264, type: 3}
+  InputBtn: {fileID: 354258998633948797, guid: 1cf1318821e9f487686f179a394fc99c, type: 3}
+  Scroll: {fileID: 781713271752561081, guid: ed2e6171d3d6249a683470ec6575eef3, type: 3}
+  Mask: {fileID: 7184010138170788557, guid: 18d1999f42270491eacc82650e527b83, type: 3}
+  Mask2D: {fileID: 1681032581598853246, guid: d5c2a77f7e69e46babcf30ca04c23dd0, type: 3}
+  Fill: {fileID: 3120451359442702854, guid: 05fd323cc512c41adacd7ce66cbe4947, type: 3}
+  Custom: []

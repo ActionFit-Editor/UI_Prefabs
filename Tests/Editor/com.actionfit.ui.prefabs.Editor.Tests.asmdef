@@ -1,0 +1,24 @@
+{
+  "name": "com.actionfit.ui.prefabs.Editor.Tests",
+  "rootNamespace": "ActionFit.UIPrefabs.Editor.Tests",
+  "references": [
+    "com.actionfit.ui.prefabs.Editor",
+    "com.actionfit.ui.foundation"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}
