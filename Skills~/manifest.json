@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "skillPrefix": "ui-prefabs",
+  "helpSkill": "ui-prefabs-help",
+  "skills": [
+    {
+      "name": "ui-prefabs-help",
+      "agents": ["codex", "claude"],
+      "includeShared": false,
+      "access": "read-only"
+    },
+    {
+      "name": "ui-prefabs-audit",
+      "agents": ["codex", "claude"],
+      "includeShared": false,
+      "access": "read-only"
+    }
+  ]
+}

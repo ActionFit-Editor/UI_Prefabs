@@ -10,7 +10,7 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 {
   "dependencies": {
     "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#1.0.0",
-    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.0"
+    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.1"
   }
 }
 ```
@@ -46,6 +46,15 @@ Package Manager의 Samples에서 `Starter UI Prefabs`를 import하면 Image, Tex
 - Runtime assembly는 없으며 런타임 타입은 Foundation에서 제공합니다.
 
 테스트는 설정의 프로젝트 소유 경로, script identity, sample 구성과 missing script 여부를 검증합니다.
+
+## Agent Skills
+
+schema v2 `Skills~/manifest.json`이 Codex와 Claude에 다음 read-only 스킬을 제공합니다.
+
+- `$ui-prefabs-help`: 설정 조회, Foundation 의존성, 샘플과 생성 메뉴의 안전 경계를 설명합니다.
+- `$ui-prefabs-audit`: 기존 `UIPrefabsSO`, prefab 참조, Missing Script, 중복 메뉴 경로와 샘플 중립성을 점검합니다.
+
+audit은 `UIPrefabsSO` 생성·이동, 샘플 import, prefab 인스턴스 생성, scene/prefab 저장과 reserialize을 실행하지 않습니다.
 
 ## 배포
 

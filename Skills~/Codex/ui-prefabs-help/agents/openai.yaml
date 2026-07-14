@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Prefabs Help"
+  short_description: "Explain UI prefab settings, samples, and safety"
+  default_prompt: "Use $ui-prefabs-help to explain UI Prefabs setup, skills, and authoring boundaries."

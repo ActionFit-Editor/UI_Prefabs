@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit UI Prefabs"
+  short_description: "Audit UI prefab settings and dependencies without writes"
+  default_prompt: "Use $ui-prefabs-audit to inspect UI prefab settings, references, and dependencies without creating assets."

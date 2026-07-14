@@ -6,7 +6,7 @@
 - Display name: UI Prefabs
 - Repository: `https://github.com/ActionFit-Editor/UI_Prefabs.git`
 - Repository visibility metadata: `Public`
-- Current package version at generation time: `1.0.0`
+- Current package version at generation time: `1.0.1`
 - Unity version: `6000.2`
 
 ## Purpose And Boundary
@@ -45,6 +45,14 @@ Read this guide before changing files under `Packages/com.actionfit.ui.prefabs/`
 - `Tools/Package/UI Prefabs/README`
 - `Tools/Package/UI Prefabs/Setting SO`
 - `GameObject/>>>UI_Prefab/...`
+
+## Agent Skills
+
+- `Skills~/manifest.json` uses schema v2 with the unique `ui-prefabs` prefix.
+- `ui-prefabs-help` and `ui-prefabs-audit` are read-only for Codex and Claude.
+- Audits must discover existing settings through direct `AssetDatabase` queries and must not call `LoadOrCreate`, import samples, execute prefab creation menus, save assets, or reserialize.
+- Package samples may be inspected in place for inventory, missing scripts, metadata, and neutral dependencies; do not import them during a read-only audit.
+- The installed help skill must read generated `PACKAGE_SKILLS.md`; do not author that reserved file in package sources.
 
 ## Validation
 
