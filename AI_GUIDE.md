@@ -6,7 +6,7 @@
 - Display name: UI Prefabs
 - Repository: `https://github.com/ActionFit-Editor/UI_Prefabs.git`
 - Repository visibility metadata: `Public`
-- Current package version at generation time: `1.0.1`
+- Current package version at generation time: `1.0.3`
 - Unity version: `6000.2`
 
 ## Purpose And Boundary
@@ -32,6 +32,11 @@ Read this guide before changing files under `Packages/com.actionfit.ui.prefabs/`
 - Settings are owned by the consuming project at `Assets/Editor/ActionFit/UI Prefabs/UIPrefabsSO.asset`, never inside the immutable package directory or `Resources`.
 - The canonical settings path wins. A single legacy `UIPrefabsSO` may be used as fallback; multiple noncanonical assets must return no selection and warn.
 - Prefab creation uses `PrefabUtility.InstantiatePrefab`, requires a selected Canvas descendant, preserves the prefab link, and registers Undo.
+- `GameObject/>>>UI_Prefab/Add UI Prefab...` always opens the authoring window. The window may save an explicitly selected Canvas-descendant scene object as a new prefab asset or register an existing prefab asset, then appends one Custom entry without replacing existing settings.
+- `UIPrefabsSO.Custom` entries generate direct `GameObject/>>>UI_Prefab/<Category>/<Label>` commands in the project-owned `Assets/Editor/ActionFitUIPrefabsGeneratedMenuItems.cs`. Registration, Inspector edits, settings asset import, and Editor reload schedule deterministic synchronization; never hand-edit the generated file.
+- Generated commands resolve prefabs by asset GUID, call `PrefabUtility.InstantiatePrefab` through `NewUIPrefabObject`, preserve Undo, and remain disabled unless the current selection is a Canvas or its descendant.
+- When the selected settings has no Custom entries, an existing generated file is rewritten to an empty menu class so stale commands disappear. Do not create a generated file when no project-owned settings or generated output exists.
+- Canceling the prefab save dialog must leave `UIPrefabsSO` unchanged. Registering a duplicate Category/Label menu path must fail with visible guidance.
 
 ## Sample Rules
 
@@ -58,6 +63,7 @@ Read this guide before changing files under `Packages/com.actionfit.ui.prefabs/`
 
 - Run the package contract validator for `com.actionfit.ui.prefabs`.
 - Run `com.actionfit.ui.prefabs.Editor.Tests` in Unity.
+- Verify generated Custom menu source is deterministic, skips invalid or duplicate paths, and compiles in the consuming project Editor assembly.
 - Verify sample prefabs have no missing scripts and no Cat project dependencies.
 - Compile in an isolated fixture containing this package and Foundation.
 

@@ -7,8 +7,8 @@ using UnityEngine;
 ///
 /// - Base: 패키지 기본 제공 UI 프리팹(이 프로젝트 기준으로 사전 배선된 명명 필드).
 /// - Custom: 사용자가 직접 끌어다 등록하는 가변 프리팹 목록(다른 프로젝트에서 자유 확장).
-/// - AllEntries(): Base + Custom 을 하나의 Entry 스트림으로 노출. 메뉴는 열릴 때마다 새로 순회하므로
-///   SO 편집이 재컴파일 없이 즉시 메뉴에 반영됨.
+/// - AllEntries(): Base + Custom 을 하나의 Entry 스트림으로 노출.
+/// - Custom 직접 생성 메뉴는 project-owned generated Editor code로 동기화됨.
 /// </summary>
 [CreateAssetMenu(menuName = "SO/UI/UIPrefabsSO", fileName = "UIPrefabsSO")]
 public class UIPrefabsSO : ScriptableObject

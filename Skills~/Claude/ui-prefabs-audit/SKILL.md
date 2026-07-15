@@ -16,7 +16,7 @@ Keep project settings, samples, scenes, prefab assets, selection, and Package Ma
 
 Do not call `UIPrefabsSettingsUtility.LoadOrCreate()` or the `Setting SO` menu.
 
-4. Audit the canonical/legacy/multiple-settings outcome, the nine base fields, custom entries, blank references, duplicate normalized category/label menu paths, prefab asset paths, missing MonoBehaviours, and broken dependencies. Treat project-specific dependencies as informational for project-owned entries.
+4. Audit the canonical/legacy/multiple-settings outcome, the nine base fields, custom entries, blank references, duplicate normalized category/label menu paths, prefab asset paths, missing MonoBehaviours, broken dependencies, and whether the existing project-owned generated Custom menu source matches the selected settings. Treat project-specific dependencies as informational for project-owned entries.
 5. Inspect package `Samples~/Starter UI Prefabs` in place without importing it. Verify the expected nine prefabs and catalog exist, metadata is present, and serialized references do not point into `Assets/_Project` or other Cat-specific assets. If a sample is already imported, it may be inspected in place but must not be reimported.
 6. Report settings selection, missing/duplicate entries, missing-script counts, dependency findings, sample inventory, and Foundation/package version alignment. Re-run `git status --short` and flag any unexpected durable change.
 

@@ -11,6 +11,6 @@ Answer in the user's language. Explain workflows without creating settings, impo
 2. Read `Packages/com.actionfit.ui.prefabs/README.md` and `AI_GUIDE.md` when available. If downloaded, resolve `Library/PackageCache/com.actionfit.ui.prefabs@*` without editing it.
 3. Explain the one-way `com.actionfit.ui.foundation` dependency, project-owned `UIPrefabsSO`, canonical and legacy lookup behavior, base/custom entries, prefab-link-preserving authoring menus, and neutral starter samples.
 4. Separate the read-only audit from `Setting SO`, Package Manager sample import, and `GameObject > >>>UI_Prefab` creation commands.
-5. List `Setting SO` and `README` under `Tools > Package > UI Prefabs`, plus the `GameObject > >>>UI_Prefab` authoring menu.
+5. List `Setting SO` and `README` under `Tools > Package > UI Prefabs`, plus the `GameObject > >>>UI_Prefab` authoring menu. Explain that `Add UI Prefab...` opens a visible authoring window even with no Custom entries, can save an explicitly selected Canvas child as a prefab asset or register an existing prefab asset, and can instantiate registered entries with their prefab link and Undo support. Explain that Custom entries also synchronize into direct `<Category> > <Label>` commands through the project-owned generated Editor source after registration, Inspector edits, asset import, and Editor reload.
 
 State that the audit never creates or moves a settings asset, imports samples, instantiates a prefab, saves a scene, or changes serialized fields.

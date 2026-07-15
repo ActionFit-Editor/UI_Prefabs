@@ -10,7 +10,7 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 {
   "dependencies": {
     "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#1.0.0",
-    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.1"
+    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.3"
   }
 }
 ```
@@ -21,9 +21,11 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 
 - `Tools > Package > UI Prefabs > Setting SO`: 프로젝트의 `Assets/Editor/ActionFit/UI Prefabs/UIPrefabsSO.asset`을 열거나 새로 만듭니다.
 - `GameObject > >>>UI_Prefab`: 선택한 Canvas 아래에 설정된 prefab을 연결 상태로 생성합니다.
+- `GameObject > >>>UI_Prefab > Add UI Prefab...`: 등록된 Custom prefab을 생성하거나, Canvas 하위 오브젝트를 새 prefab asset으로 저장·등록하고 기존 prefab asset을 바로 등록하는 창을 엽니다. Custom 항목이나 Canvas 선택이 없어도 창은 열리고 필요한 입력을 안내합니다.
+- `GameObject > >>>UI_Prefab > <Category> > <Label>`: `UIPrefabsSO.Custom` 항목을 창을 거치지 않고 바로 생성합니다. 등록, Inspector 수정, asset 재가져오기, Editor 재로드 시 `Assets/Editor/ActionFitUIPrefabsGeneratedMenuItems.cs`가 자동 동기화되고 컴파일 후 메뉴에 반영됩니다.
 - `Tools > Package > UI Prefabs > README`: 이 문서를 엽니다.
 
-설정은 다운로드 패키지 안에 저장하지 않습니다. 기본 경로의 설정이 없고 프로젝트 전체에 `UIPrefabsSO`가 하나만 있으면 기존 자산을 호환 경로로 사용하며, 여러 개면 기본 경로로 옮기도록 경고합니다.
+설정과 generated Custom 메뉴 코드는 다운로드 패키지 안에 저장하지 않습니다. 기본 경로의 설정이 없고 프로젝트 전체에 `UIPrefabsSO`가 하나만 있으면 기존 자산을 호환 경로로 사용하며, 여러 개면 기본 경로로 옮기도록 경고합니다. generated 파일은 파생 산출물이므로 직접 수정하지 않습니다.
 
 ## Starter UI Prefabs 샘플
 
