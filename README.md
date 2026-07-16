@@ -9,13 +9,13 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 ```json
 {
   "dependencies": {
-    "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#1.0.0",
-    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.3"
+    "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#1.0.5",
+    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.4"
   }
 }
 ```
 
-`com.actionfit.ui.prefabs`의 `package.json`도 Foundation `1.0.0` 의존성을 선언합니다. 위 URL은 Public 저장소 배포용 계약이며 실제 원격 저장소와 태그 발행은 Custom Package Manager에서 별도로 수행합니다.
+`com.actionfit.ui.prefabs`의 `package.json`도 Foundation `1.0.5` 의존성을 선언합니다. 위 URL은 Public 저장소 배포용 계약이며 실제 원격 저장소와 태그 발행은 Custom Package Manager에서 별도로 수행합니다.
 
 ## 사용
 
