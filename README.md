@@ -10,7 +10,7 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 {
   "dependencies": {
     "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#1.0.5",
-    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.4"
+    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#1.0.6"
   }
 }
 ```
@@ -49,7 +49,7 @@ Package Manager의 Samples에서 `Starter UI Prefabs`를 import하면 Image, Tex
 
 테스트는 설정의 프로젝트 소유 경로, script identity, sample 구성과 missing script 여부를 검증합니다.
 
-## Agent Skills
+## Agent Skill 안내
 
 schema v2 `Skills~/manifest.json`이 Codex와 Claude에 다음 read-only 스킬을 제공합니다.
 

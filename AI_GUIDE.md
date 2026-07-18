@@ -6,7 +6,7 @@
 - Display name: UI Prefabs
 - Repository: `https://github.com/ActionFit-Editor/UI_Prefabs.git`
 - Repository visibility metadata: `Public`
-- Current package version at generation time: `1.0.4`
+- Current package version at generation time: `1.0.6`
 - Unity version: `6000.2`
 
 ## Purpose And Boundary
