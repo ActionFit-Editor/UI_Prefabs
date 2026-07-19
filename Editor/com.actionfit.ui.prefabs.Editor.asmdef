@@ -2,7 +2,9 @@
     "name": "com.actionfit.ui.prefabs.Editor",
     "rootNamespace": "",
     "references": [
-        "com.actionfit.ui.foundation"
+        "com.actionfit.ui.foundation",
+        "com.actionfit.sosingleton",
+        "com.actionfit.sosingleton.Editor"
     ],
     "includePlatforms": [
         "Editor"

@@ -75,6 +75,7 @@ namespace ActionFit.UIPrefabs.Editor.Tests
                         Is.Zero,
                         $"{path} ({child.name})");
                 }
+                AssertMigratedButtons(path, prefab);
                 AssertNeutralDependencies(path);
             }
 
@@ -96,6 +97,15 @@ namespace ActionFit.UIPrefabs.Editor.Tests
         {
             Assert.That(prefab, Is.Not.Null, name);
             Assert.That(AssetDatabase.GetAssetPath(prefab), Is.EqualTo($"{_importedRoot}/{name}.prefab"));
+        }
+
+        private static void AssertMigratedButtons(string path, GameObject prefab)
+        {
+            foreach (UI_Button button in prefab.GetComponentsInChildren<UI_Button>(true))
+            {
+                Assert.That(button.GetComponent<UnityEngine.UI.Button>(), Is.Null, $"{path} ({button.name})");
+                Assert.That(button.GetComponent<UIButtonPressEffect>(), Is.Null, $"{path} ({button.name})");
+            }
         }
 
         private void AssertNeutralDependencies(string assetPath)

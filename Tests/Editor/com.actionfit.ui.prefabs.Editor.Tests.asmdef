@@ -3,7 +3,8 @@
   "rootNamespace": "ActionFit.UIPrefabs.Editor.Tests",
   "references": [
     "com.actionfit.ui.prefabs.Editor",
-    "com.actionfit.ui.foundation"
+    "com.actionfit.ui.foundation",
+    "com.actionfit.sosingleton"
   ],
   "includePlatforms": [
     "Editor"

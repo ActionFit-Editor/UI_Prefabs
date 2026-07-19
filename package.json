@@ -1,6 +1,6 @@
 {
   "name": "com.actionfit.ui.prefabs",
-  "version": "1.0.6",
+  "version": "2.0.1",
   "displayName": "UI Prefabs",
   "description": "UI Foundation 기반 프리팹 생성 메뉴, 프로젝트 소유 설정, 중립 Samples를 제공하는 선택 패키지.",
   "unity": "6000.2",
@@ -8,7 +8,8 @@
     "name": "ActionFit"
   },
   "dependencies": {
-    "com.actionfit.ui.foundation": "1.0.6"
+    "com.actionfit.ui.foundation": "2.0.0",
+    "com.actionfit.sosingleton": "1.0.6"
   },
   "samples": [
     {

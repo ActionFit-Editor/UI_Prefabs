@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using ActionFit.SOSingleton;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -14,9 +15,8 @@ namespace ActionFit.UIPrefabs.Editor.Tests
 
         private static readonly string[] SettingsFolders =
         {
-            "Assets/Editor",
-            "Assets/Editor/ActionFit",
-            "Assets/Editor/ActionFit/UI Prefabs"
+            "Assets/_Data",
+            "Assets/_Data/_UI Prefabs"
         };
 
         [TearDown]
@@ -46,9 +46,18 @@ namespace ActionFit.UIPrefabs.Editor.Tests
         {
             Assert.That(
                 UIPrefabsSettingsUtility.DefaultAssetPath,
-                Is.EqualTo("Assets/Editor/ActionFit/UI Prefabs/UIPrefabsSO.asset"));
+                Is.EqualTo("Assets/_Data/_UI Prefabs/UIPrefabsSO.asset"));
             Assert.That(UIPrefabsSettingsUtility.DefaultAssetPath, Does.Not.StartWith("Packages/"));
             Assert.That(UIPrefabsSettingsUtility.DefaultAssetPath, Does.Not.Contain("/Resources/"));
+
+            var registration = (ActionFitSettingsAssetAttribute)Attribute.GetCustomAttribute(
+                typeof(UIPrefabsSO),
+                typeof(ActionFitSettingsAssetAttribute));
+            Assert.That(registration, Is.Not.Null);
+            Assert.That(registration.Lifetime, Is.EqualTo(ActionFitSettingsAssetLifetime.EditorOnly));
+            Assert.That(
+                registration.LegacyPaths,
+                Does.Contain("Assets/Editor/ActionFit/UI Prefabs/UIPrefabsSO.asset"));
         }
 
         [Test]

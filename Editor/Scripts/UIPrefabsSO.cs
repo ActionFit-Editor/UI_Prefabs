@@ -1,3 +1,4 @@
+using ActionFit.SOSingleton;
 using UnityEngine;
 
 /// <summary>
@@ -11,6 +12,13 @@ using UnityEngine;
 /// - Custom 직접 생성 메뉴는 project-owned generated Editor code로 동기화됨.
 /// </summary>
 [CreateAssetMenu(menuName = "SO/UI/UIPrefabsSO", fileName = "UIPrefabsSO")]
+[ActionFitSettingsAsset(
+    "UI Prefabs",
+    ActionFitSettingsAssetLifetime.EditorOnly,
+    LegacyPaths = new string[]
+    {
+        "Assets/Editor/ActionFit/UI Prefabs/UIPrefabsSO.asset"
+    })]
 public class UIPrefabsSO : ScriptableObject
 {
 #if UNITY_EDITOR
