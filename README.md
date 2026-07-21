@@ -14,7 +14,7 @@ Unity Package Manager의 Git dependency로 두 패키지를 설치합니다.
 {
   "dependencies": {
     "com.actionfit.ui.foundation": "https://github.com/ActionFit-Editor/UI_Foundation.git#2.0.0",
-    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#2.0.1"
+    "com.actionfit.ui.prefabs": "https://github.com/ActionFit-Editor/UI_Prefabs.git#2.0.2"
   }
 }
 ```

@@ -6,7 +6,7 @@
 - Display name: UI Prefabs
 - Repository: `https://github.com/ActionFit-Editor/UI_Prefabs.git`
 - Repository visibility metadata: `Public`
-- Current package version at generation time: `2.0.1`
+- Current package version at generation time: `2.0.2`
 - Unity version: `6000.2`
 
 ## Purpose And Boundary
@@ -51,6 +51,7 @@ Read this guide before changing files under `Packages/com.actionfit.ui.prefabs/`
 - Keep Image, Text, Button, Input, InputBtn, Scroll, Mask, Mask2D, Fill prefabs and the sample catalog internally consistent.
 - Every sample `UI_Button` must use Foundation 2.0 directly and must not carry a native `UnityEngine.UI.Button` or same-GameObject `UIButtonPressEffect`.
 - Generate or edit prefab YAML through Unity serialization APIs. Preserve `.meta` GUIDs after creation.
+- Version `2.0.2` enables TMP Extra Padding in every Starter UI Prefabs sample while preserving sample hierarchy, references, text, materials, and GUIDs.
 
 ## Package Menus
 
